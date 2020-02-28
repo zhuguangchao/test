@@ -42,7 +42,7 @@ public class SkuController {
     }
 
     /***
-     * 查询Sku单个数据11
+     * 查询Sku单个数据111
      * @return
      */
     @GetMapping("/{id}")
