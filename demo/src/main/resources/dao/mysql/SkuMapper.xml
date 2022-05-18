@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.goods.dao.mysql.SkuMapper">
+    <select id="getAllSku" resultType="com.example.goods.pojo.Sku">
+        select * from tb_sku
+    </select>
+
+    <select id="findAll" resultType="com.example.goods.pojo.Sku">
+        select id,name,price from tb_sku
+    </select>
+
+    <select id="findById" resultType="com.example.goods.pojo.Sku">
+        select * from tb_sku c where c.id = #{id}
+    </select>
+</mapper>

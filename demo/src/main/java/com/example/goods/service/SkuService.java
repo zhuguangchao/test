@@ -24,4 +24,11 @@ public interface SkuService {
      * @return
      */
     Sku findById(Long id);
+
+
+    /**
+     * 查询所有
+     * @return
+     */
+    List<Sku> getAll();
 }

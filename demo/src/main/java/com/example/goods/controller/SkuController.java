@@ -15,6 +15,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 /****
@@ -26,6 +28,10 @@ import java.util.List;
 @RestController
 @RequestMapping("/sku")
 public class SkuController {
+
+    public static void main(String[] args) {
+        HashMap<Object, Object> objectObjectHashMap = new HashMap<>();
+    }
 
     @Autowired
     public SkuService skuService;
@@ -50,5 +56,16 @@ public class SkuController {
         //调用SkuService实现查询所有Sku
         Sku sku = skuService.findById(id);
         return new Result<Sku>(true, StatusCode.OK, "查询成功", sku);
+    }
+
+    /**
+     * 查询所有
+     * @return
+     */
+    @GetMapping("/getAll")
+    public List<Sku> getAll() {
+        //调用SkuService实现查询所有Sku
+        List<Sku> sku = skuService.getAll();
+        return sku;
     }
 }
